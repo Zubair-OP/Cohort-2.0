@@ -1,0 +1,56 @@
+@font-face {
+    font-family: bike;
+    src: url(./Sakana.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: bike;
+}
+
+body,html {
+    height: 100%;
+    width: 100%;
+}
+
+.box {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://plus.unsplash.com/premium_photo-1661955488707-44a1a455c252?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171);
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box h1 {
+    font-size: 70px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.box button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5733;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    &:hover {
+        background-color: #e74c3c;
+    }
+}
