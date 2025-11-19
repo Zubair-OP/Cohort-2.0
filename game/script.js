@@ -1,4 +1,3 @@
-// DOM Elements ko get karna
 const gameBoard = document.getElementById('game-board');
 const scoreDisplay = document.getElementById('score');
 const highScoreDisplay = document.getElementById('high-score');
@@ -18,16 +17,14 @@ let time;
 let gameInterval;
 let timerInterval;
 let isGameOver;
-const gameSpeed = 200; // Milliseconds (jitna kam, utna tez)
+const gameSpeed = 200; // Milliseconds 
 
-// Game ko shuru ya restart karne ka function
 function startGame() {
-    // Purane intervals clear karna
+    
     clearInterval(gameInterval);
     clearInterval(timerInterval);
 
-    // Initial values set karna
-    // Snake 3 objects (segments) se shuru hoga
+
     snake = [
         { x: 10, y: 10 },
         { x: 9, y: 10 },
@@ -46,12 +43,9 @@ function startGame() {
     timeDisplay.textContent = '0s';
     gameOverModal.classList.add('modal-hidden');
 
-    // Pehla food generate karna
     generateFood();
 
-    // Game loop shuru karna
     gameInterval = setInterval(gameLoop, gameSpeed);
-    // Timer shuru karna
     timerInterval = setInterval(updateTime, 1000);
 }
 
@@ -79,30 +73,24 @@ function draw() {
         gameBoard.appendChild(snakeElement);
     });
 
-    // Food ko draw karna
     const foodElement = createGameElement('div', 'food');
     setGridPosition(foodElement, food);
     gameBoard.appendChild(foodElement);
 }
 
-// Helper function: Naya game element banana
+
 function createGameElement(tag, className) {
     const element = document.createElement(tag);
     element.className = className;
     return element;
 }
-
-// Helper function: Element ki grid position set karna
 function setGridPosition(element, position) {
     element.style.gridColumn = position.x;
     element.style.gridRow = position.y;
 }
 
-// Snake ko move karna
 function moveSnake() {
-    const head = { ...snake[0] }; // Naya head banana
-
-    // Direction ke hisab se head ki position update karna
+    const head = { ...snake[0] }; 
     switch (direction) {
         case 'up':
             head.y--;
@@ -118,16 +106,12 @@ function moveSnake() {
             break;
     }
 
-    snake.unshift(head); // Naya head snake ke shuru mein add karna
-
-    // Check karna ke food khaya ya nahi
+    snake.unshift(head);
     if (head.x === food.x && head.y === food.y) {
-        // Food khaya
         score++;
         scoreDisplay.textContent = score;
-        generateFood(); // Naya food banana
+        generateFood();
     } else {
-        // Food nahi khaya, toh poonch (tail) hatado
         snake.pop();
     }
 }
@@ -151,7 +135,7 @@ function checkCollision() {
     return false;
 }
 
-// Naya food random jagah par generate karna
+
 function generateFood() {
     let newFoodPosition;
     do {
@@ -159,7 +143,7 @@ function generateFood() {
             x: Math.floor(Math.random() * gridSize) + 1,
             y: Math.floor(Math.random() * gridSize) + 1
         };
-    } while (isSnakeOnFood(newFoodPosition)); // Jab tak food snake ke upar hai, naya banao
+    } while (isSnakeOnFood(newFoodPosition)); 
 
     food = newFoodPosition;
 }
@@ -206,9 +190,8 @@ function gameOver() {
     gameOverModal.classList.remove('modal-hidden');
 }
 
-// Keyboard input (Arrow keys) handle karna
+
 function handleKeyPress(event) {
-    // Snake ko ulta ghoomne se rokna
     const goingUp = (direction === 'up');
     const goingDown = (direction === 'down');
     const goingLeft = (direction === 'left');
@@ -230,9 +213,8 @@ function handleKeyPress(event) {
     }
 }
 
-// Event Listeners set karna
+
 document.addEventListener('keydown', handleKeyPress);
 restartButton.addEventListener('click', startGame);
 
-// Game ko pehli baar shuru karna
 startGame();
