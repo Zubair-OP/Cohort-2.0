@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;  
+    background-color: #111;
+    color: #fff;  
+}
+
+section {
+    width: 100%;
+    padding: 16px;    
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.infos h1 {
+    font-size: 16px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(55px, 1fr));
+    flex-grow: 1;
+    height: 90vh;
+}
+
+
+.block {
+    border: 1px solid #494646;
+}
+
+.fill {
+    background-color: crimson;
+}
+
+.food {
+    background-color: limegreen;
+}
+
+
+.modal {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal .Over, .modal .Start {
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #fff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal .Over {
+    display: none;
+}
+
+.modal .Start {
+    display: flex;
+}
+
+.Start-btn , .ReStart-btn {
+    padding: 10px 20px;;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+    margin-top: 20px;
+} 
