@@ -26,7 +26,7 @@ let naats = [
         name : 'Allah humma salli',
         time : '4:00',
         url : '/musicplayer/Videos/allahumma-salli-ala.mp3',
-        image: '/musicplayer/images/samiyousaf.jpg'
+        image: 'https://media.gettyimages.com/id/77496519/photo/to-go-with-afp-story-britain-sudan-darfur-conflict-music-islam-iranian-born-british-musician.jpg?s=612x612&w=gi&k=20&c=wdDyFaObFxZaGtSuGcWwR0c_U4ixWicgQjGBZR-7d3E='
         },
 ]
 
