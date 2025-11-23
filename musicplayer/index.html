@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vevo Music Player Fixed</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Rock+Salt&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="player-wrapper">
+      <div class="left-panel">
+        <div class="artist-photo" alt="Artist"></div>
+
+        <div class="lp-content">
+
+          <div class="back-btn">
+            <i class="material-icons-outlined arrow-icon">west</i>
+          </div>
+        </div>
+
+        <div class="signature">#42</div>
+      </div>
+
+      <div class="right-panel">
+        <div class="album-meta">
+
+          <div class="main-title">
+            <div class="big-title">01&mdash;Naat Collections<br /></div>
+            <div class="faded-next">02-<br />FLY</div>
+          </div>
+        </div>
+
+        <div class="song-list-container"></div>
+
+        <div class="player-bar">
+          <div class="controls-row">
+            <div class="controls-left">
+              <i id="back" class="material-icons ctrl-icon">skip_previous</i>
+              <i id="play" class="ri-play-circle-fill ctrl-icon"></i>
+              <i id="forward" class="material-icons ctrl-icon">skip_next</i>
+            </div>
+
+            <div class="progress-container" id="progress-container">
+              <div class="progress-fill" id="progress-fill"></div>
+            </div>
+
+            <div class="time-info">
+              <span id="current-time">0:00</span> /
+              <span id="total-duration">0:00</span>
+              <i
+                class="material-icons ctrl-icon"
+                style="
+                  font-size: 1.1rem;
+                  margin-left: 10px;
+                  vertical-align: middle;
+                "
+                >volume_up</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
