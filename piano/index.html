@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Piano UI</title>
+    <style>
+        /* 1. Reset & Body Styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2c3e50; /* Dark slate background */
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* 2. The Piano Case/Body */
+        .piano-case {
+            background-color: #1a1a1a;
+            padding: 40px 30px 20px 30px;
+            border-radius: 15px;
+            box-shadow: 
+                0 20px 50px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+            position: relative;
+            text-align: center;
+        }
+
+        .brand {
+            color: #d4af37; /* Gold color */
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* 3. The Keyboard Container */
+        .keys-container {
+            display: flex;
+            position: relative; /* Anchor for black keys */
+        }
+
+        /* 4. White Keys Styling */
+        .key {
+            position: relative;
+            width: 60px;
+            height: 240px;
+            background: linear-gradient(to bottom, #fff 0%, #f2f2f2 100%);
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
+            margin: 0 2px;
+            cursor: pointer;
+            /* 3D Effect */
+            box-shadow: 
+                inset 0 1px 0 #fff,
+                inset 0 -5px 10px rgba(0,0,0,0.1),
+                0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.1s ease;
+            z-index: 1;
+        }
+
+        /* White Key Active State */
+        .key:active {
+            background: linear-gradient(to bottom, #fff 0%, #e6e6e6 100%);
+            box-shadow: 
+                inset 0 1px 0 #fff,
+                inset 0 -2px 5px rgba(0,0,0,0.2),
+                0 1px 2px rgba(0,0,0,0.2);
+            transform: translateY(2px); /* Moves down when pressed */
+            height: 238px; /* Slightly shortens visually */
+        }
+
+        /* 5. Black Keys Styling */
+        .key.black {
+            position: absolute;
+            width: 40px;
+            height: 150px;
+            background: linear-gradient(to bottom, #333 0%, #000 100%);
+            border: none;
+            border-radius: 0 0 3px 3px;
+            z-index: 2; /* Sit on top of white keys */
+            top: 0;
+            box-shadow: 
+                inset 0 1px 2px rgba(255,255,255,0.2),
+                0 3px 5px rgba(0,0,0,0.4);
+}
+
+        /* Black Key Active State */
+        .key.black:active {
+            background: linear-gradient(to bottom, #222 0%, #000 100%);
+            box-shadow: inset 0 1px 2px rgba(255,255,255,0.1);
+            transform: translateY(3px);
+        }
+
+        /* 6. Black Key Positioning (Calculated for visual accuracy) */
+        /* White key width = 60px + 4px margin = 64px total space
+           We position black keys between the white ones.
+        */
+        .black.cs { left: 45px; }  /* C# */
+        .black.ds { left: 110px; } /* D# */
+        .black.fs { left: 238px; } /* F# */
+        .black.gs { left: 302px; } /* G# */
+        .black.as { left: 366px; } /* A# */
+
+    </style>
+</head>
+<body>
+
+    <div class="piano-case">
+        <div class="brand">Steinway CSS</div>
+        
+        <div class="keys-container">
+            <div class="key white"></div> 
+            <div class="key black cs"></div>
+            
+            <div class="key white"></div>
+            <div class="key black ds"></div>
+            
+            <div class="key white"></div>
+            
+            <div class="key white"></div>
+            <div class="key black fs"></div>
+            
+            <div class="key white"></div>
+            <div class="key black gs"></div>
+            
+            <div class="key white"></div>
+            <div class="key black as"></div>
+            
+            <div class="key white"></div>
+            
+            <div class="key white"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
