@@ -1,0 +1,175 @@
+/* CSS Boilerplate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --primary-color: #fff;
+    --button-color: #f44336;
+    --background-color: #222;
+    --nav-padding: 1rem 2rem;
+    --padding-sm : 0.5rem;
+    --padding-md : 1rem;
+    --padding-lg : 2rem;
+    --gap-md : 1rem;
+    --gap-sm : 0.5rem;
+    --button-radius-sm : 2px;
+    --button-radius-md : 4px;
+    --button-radius-lg : 8px;
+    --modal-background-color: #333;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding);
+    background-color: var(--background-color);
+}
+
+nav button {
+    padding: var(--padding-sm) var(--padding-md);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+}
+
+section {
+    padding: var(--padding-sm);
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: var(--gap-md);
+}
+
+section .task-colomn {
+    border: .1px solid var(--primary-color);
+    flex-grow: 1;
+    padding: var(--padding-sm);
+    transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding-sm);
+    gap: var(--gap-md);
+}
+
+.task-colomn h4 {
+    font-weight: 600;
+}
+
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    padding: var(--padding-md);
+    background-color: #333;
+}
+
+.task > button {
+    align-self: flex-end;
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--button-radius-lg);
+    background-color: var(--button-color);
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 0.9rem;
+    outline: none;
+} 
+
+.drag-over {
+    border: 2px dashed var(--primary-color);
+    transform: scale(1.03);
+}
+
+.task.dragging {
+    opacity: 0.5;
+}
+
+.task {
+    cursor: grab;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+    z-index: 5;
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--modal-background-color);
+    padding: var(--padding-lg);
+    border-radius: var(--button-radius-md);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.modal .Add-btn {
+    padding: var(--padding-sm) var(--padding-md);
+    background-color: var(--button-color);
+    border: none;
+    border-radius: var(--button-radius-md);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    align-self: center;
+}
+
+textarea, input[type="text"] {
+    border: none;
+    border-radius: var(--button-radius-sm);
+    font-size: 0.9rem;
+    outline: none;
+}
