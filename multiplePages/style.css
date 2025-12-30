@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: #222;
+    padding: 10px;
+    
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgb(208, 81, 106);
+    outline: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+section.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.cards {
+    width: 270px;
+    height: 250px;
+    box-shadow:  0 0 0 2px #dc7b7b;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cards:hover {
+    box-shadow: 0 0 15px 2px #dc7b7b;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card1 {
+    background-color: rgb(208, 81, 106);
+    position: relative;
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card1 h3 {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(233, 138, 13);
+}
+
+.todoPage {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.dailyPlannerPage {
+    width: 100%;
+    height: 100%;
+     background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.pomodoroPage {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.motivationsPage {
+    width: 100%;
+    height: 100%;
+     background-color: #222;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+/* Todo Page Styling */
+.todoPage {
+    display: block;
+    padding: 10px;
+}
+
+.todoPage nav {
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+    padding: 20px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.todoPage nav h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.todoPage .btnClose {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todoPage .btnClose:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+.todomain {
+    display: flex;
+    gap: 30px;
+    height: calc(100vh - 150px);
+    padding: 0 10px;
+}
+
+.left {
+    width: 400px;
+    background: linear-gradient(135deg, #a07855, #8b6f47);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+}
+
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.todoInput , textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.todoInput::placeholder {
+    color: #888;
+}
+
+.addTodoBtn {
+    width: 100%;
+    background: linear-gradient(135deg, #d4a574, #c9985e);
+    color: #333;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.addTodoBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(212, 165, 116, 0.4);
+}
+
+.todoList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.rite {
+    flex: 1;
+    background: linear-gradient(135deg, #a07855, #8b6f47);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+/* Todo Item Styling */
+.taskitem {
+    background: rgba(163, 179, 28, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+    animation: slideIn 0.3s ease-out;
+    width: 100%;
+}
+
+.deletebtn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: crimson;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.todoItem:hover {
+    transform: translateX(5px);
+}
+
+.todoItem.completed {
+    opacity: 0.6;
+}
+
+.todoItem.completed .todoText {
+    text-decoration: line-through;
+}
+
+.todoText {
+    flex: 1;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.taskitem {
+
+}
+
+.todoActions {
+    display: flex;
+    gap: 10px;
+}
+
+.completeBtn,
+.deleteBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.completeBtn {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+}
+
+.completeBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.deleteBtn {
+    background: linear-gradient(135deg, #f44336, #da190b);
+    color: white;
+}
+
+.deleteBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 67, 54, 0.4);
+}
+
+.emptyState {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    padding: 40px;
+}
+
+/* Responsive Design for Todo Page */
+@media (max-width: 1024px) {
+    .todomain {
+        flex-direction: column;
+    }
+    
+    .left {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .todoPage nav h1 {
+        font-size: 1.5rem;
+    }
+    
+    .todoItem {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .todoActions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+
