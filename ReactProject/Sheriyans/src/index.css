@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/NeueMachina-Regular_DQCmjH1st.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display';
+  src: url('/HelveticaNowDisplay-Medium_2wEhlmo-TD_wsqqEEwmJC.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display 2';
+  src: url('/HelveticaNowDisplay-Bold_VMHV5twUMR_2SBNfxj1ry.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Helvetica Now Display 1';
+  src: url('/HelveticaNowDisplay-ExtraBold_Qqt_sGOvuc_Z0ZOJEQucI.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RemixIcon';
+  src: url('/remixicon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* CSS Boilerplate */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Hide scrollbar for webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for all elements */
+* {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

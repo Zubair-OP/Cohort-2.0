@@ -1,0 +1,24 @@
+import React from 'react'
+import Button from './button.jsx'
+
+function Sponser() {
+  return (
+    <div className='w-full h-screen flex p-5 flex-col justify-between'>
+      <div className="top text-center text-[2.7rem] font-400 leading-12" style={{fontFamily: 'Neue Machina, sans-serif'}}>
+        <span className='text-[#E9E9E9]'>
+            Top companies  our students 
+          <br />
+          <span className="text-highlight text-[#24CFA6]">working with</span>
+        </span>
+      </div>
+      <div className="bottom w-2/3 h-75 text-center mx-auto">
+        <img src="./images/company.webp" alt="" />
+      </div>
+      <div className='text-center'>
+        <Button text="Explore Courses" />
+      </div>
+    </div>
+  )
+}
+
+export default Sponser
