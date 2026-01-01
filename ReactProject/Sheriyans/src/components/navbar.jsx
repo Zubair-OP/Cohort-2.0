@@ -14,11 +14,9 @@ function Navbar(props) {
             </div>
         </div>
         <div className='rite flex gap-12 items-center text-sm cursor-pointer'>
-            <p>{props.p1}</p>
-            <p>{props.p2}</p>
-            <p>{props.p3}</p>
-            <p>{props.p4}</p>
-            <p>{props.p5}</p>
+            {props.links.map((e)=>{
+                return <p>{e}</p>
+            })}
             <i className="ri-notification-3-fill"></i>
             <img className='w-5 h-5 rounded-full object-center' src="vite.svg" alt="Some Icon" />
         </div>

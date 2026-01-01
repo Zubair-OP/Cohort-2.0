@@ -10,8 +10,7 @@ function App() {
     <>
     <div className='main min-h-full w-full text-[#C5C5C5] relative'>
       <img className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full h-full object-cover -z-10" src="/images/blur.svg" alt="" />
-      <Navbar className="some-class z-10" title="Sheriyans" subtitle="Coding School" p1="Home" p2 = "Courses" p3="Bootcamps" p4="Request Callback" p5="Classroom" />
-      <Hero/>
+      <Navbar className="some-class z-10" title="Sheriyans" subtitle="Coding School" links={["Home", "Courses", "Bootcamps", "Request Callback", "Classroom"]} />
       <Video/>
       <Page3/>
       <Sponser/>
