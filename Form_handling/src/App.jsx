@@ -3,16 +3,19 @@ import Card from './components/Card';
 
 function App() {
 
+  var userlist = JSON.parse(localStorage.getItem("userlist")) || [];
+
   const [name, setname] = useState('');
   const [email, setemail] = useState('');
   const [imageUrl, setImageUrl] = useState('');
   const [role, setRole] = useState('');
-  const [list, setlist] = useState([])
+  const [list, setlist] = useState(userlist);
 
   const DeleteHandler = (idx) =>{
     const copylist = [...list];
     copylist.splice(idx, 1);
     setlist(copylist);
+    localStorage.setItem("userlist", JSON.stringify(copylist));
   }
 
   const formHandler = (e) =>{
@@ -21,6 +24,7 @@ function App() {
     const newList = [...list, {name, email, imageUrl, role}];
     setlist(newList);
     console.log(newList);
+    localStorage.setItem("userlist", JSON.stringify(newList));
 
     setname('');
     setemail('');
