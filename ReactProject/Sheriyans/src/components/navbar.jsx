@@ -1,5 +1,6 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
+import { Link,NavLink } from 'react-router-dom'
 
 function Navbar(props) {
   return (
@@ -14,9 +15,36 @@ function Navbar(props) {
             </div>
         </div>
         <div className='rite flex gap-12 items-center text-sm cursor-pointer'>
-            {props.links.map((e)=>{
-                return <p>{e}</p>
-            })}
+            <NavLink 
+                to="/" 
+                className={({isActive}) => isActive ? 'text-[#24CFA6]' : 'text-[#E9E9E9] hover:text-[#24CFA6] transition-colors'}
+            >
+                Home
+            </NavLink>
+            <NavLink 
+                to="/courses" 
+                className={({isActive}) => isActive ? 'text-[#24CFA6]' : 'text-[#E9E9E9] hover:text-[#24CFA6] transition-colors'}
+            >
+                Courses
+            </NavLink>
+            <NavLink 
+                to="/bootcamps" 
+                className={({isActive}) => isActive ? 'text-[#24CFA6]' : 'text-[#E9E9E9] hover:text-[#24CFA6] transition-colors'}
+            >
+                Bootcamps
+            </NavLink>
+            <NavLink 
+                to="/request-callback" 
+                className={({isActive}) => isActive ? 'text-[#24CFA6]' : 'text-[#E9E9E9] hover:text-[#24CFA6] transition-colors'}
+            >
+                Request Callback
+            </NavLink>
+            <NavLink 
+                to="/classroom" 
+                className={({isActive}) => isActive ? 'text-[#24CFA6]' : 'text-[#E9E9E9] hover:text-[#24CFA6] transition-colors'}
+            >
+                Classroom
+            </NavLink>
             <i className="ri-notification-3-fill"></i>
             <img className='w-5 h-5 rounded-full object-center' src="vite.svg" alt="Some Icon" />
         </div>

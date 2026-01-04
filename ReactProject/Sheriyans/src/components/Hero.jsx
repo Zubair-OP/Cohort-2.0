@@ -1,4 +1,9 @@
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
+
 function Hero() {
+  const navigate = useNavigate()
+  
   return (
     <>
      <div className='hero w-full h-screen relative text-[rgb(233,233,233)] gap-14 flex flex-col items-center justify-start'>
@@ -7,7 +12,7 @@ function Hero() {
             really <span className="italic text-white-100 leading-[1.2] font-[RemixIcon]">good</span> at. <br />
           </span>
         </h1>
-       <button 
+       <button onClick={() => navigate('/courses')}
         className="
           inline-flex items-center justify-center
           bg-[#24CFA6]
