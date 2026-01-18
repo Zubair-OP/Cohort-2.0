@@ -1,7 +1,9 @@
 import React from 'react'
 import Button from './button.jsx'
+import { useNavigate } from 'react-router-dom'
 
 function Sponser() {
+  const navigate = useNavigate();
   return (
     <div className='w-full min-h-screen flex p-5 flex-col justify-between'>
       <div className="top text-center text-3xl md:text-[2.7rem] font-400 leading-tight md:leading-12" style={{fontFamily: 'Neue Machina, sans-serif'}}>
@@ -15,7 +17,7 @@ function Sponser() {
         <img src="./images/company.webp" alt="" className="w-full h-full object-contain" />
       </div>
       <div className='text-center'>
-        <Button text="Explore Courses" />
+        <Button text="Explore Courses" onClick={() => navigate('/courses')}/>
       </div>
     </div>
   )

@@ -6,14 +6,14 @@ const Footer = () => {
     <footer className=" text-[#C5C5C5] pt-16 px-8 border-t border-zinc-800" style={{fontFamily: 'Neue Machina, sans-serif'}}>
       <div className="w-[95vw] px-15 mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-15 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-15 mb-20 text-center md:text-left">
           {/* Logo and Social Links Section */}
           <div className="space-y-6">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center md:justify-start gap-2">
               <img src="/images/light-logo_lNzGXRRlQ.webp" alt="Sheriyans Logo" className="w-12 h-12" />
             </div>
             <p className="text-sm text-gray-400">Let's connect with our socials</p>
-            <div className="flex gap-4">
+            <div className="flex justify-center md:justify-start gap-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <FaInstagram size={24} />
               </a>

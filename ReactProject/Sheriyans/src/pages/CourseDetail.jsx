@@ -69,7 +69,7 @@ const CourseDetail = () => {
                 onClick={() => navigate('/request-callback')}
                 className="w-full bg-[#24CFA6] text-black py-4 rounded-xl font-bold text-xl 
                            hover:bg-[#66e4cf] transition-all transform hover:scale-[1.02] shadow-lg
-                           flex items-center justify-center gap-2"
+                           flex items-center justify-center gap-2 cursor-pointer"
             >
               Enroll Now 
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
