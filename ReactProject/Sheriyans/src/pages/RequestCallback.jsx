@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 function RequestCallback() {
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,7 +11,6 @@ function RequestCallback() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
     alert('Thank you! We will call you back soon.')
     setFormData({
       name: '',
@@ -18,6 +18,7 @@ function RequestCallback() {
       phone: '',
       message: ''
     })
+    localStorage.setItem('formData', JSON.stringify(formData))
   }
 
   const handleChange = (e) => {
@@ -28,15 +29,15 @@ function RequestCallback() {
   }
 
   return (
-    <div className='py-10 px-20 flex flex-col items-center w-full' style={{fontFamily: 'Neue Machina, sans-serif'}}>
-      <h1 className='text-5xl font-bold mb-6 text-[#24CFA6]'>
+    <div className='py-10 px-6 md:px-20 flex flex-col items-center w-full min-h-screen pt-24 md:pt-32' style={{fontFamily: 'Neue Machina, sans-serif'}}>
+      <h1 className='text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-[#24CFA6] text-center'>
         Request a Callback
       </h1>
-      <p className='text-xl text-[#E9E9E9] mb-10'>
+      <p className='text-lg md:text-xl text-[#E9E9E9] mb-8 md:mb-10 text-center'>
         Fill out the form below and we'll get back to you shortly.
       </p>
       
-      <form onSubmit={handleSubmit} className='min-w-2xl space-y-6 px-10'>
+      <form onSubmit={handleSubmit} className='w-full max-w-2xl space-y-6 px-0 md:px-10'>
         <div>
           <label className='block text-[#E9E9E9] mb-2'>Name</label>
           <input 

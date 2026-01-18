@@ -6,6 +6,7 @@ import CoursesPage from './pages/CoursesPage.jsx'
 import Bootcamps from './pages/Bootcamps.jsx'
 import RequestCallback from './pages/RequestCallback.jsx'
 import Classroom from './pages/Classroom.jsx'
+import CourseDetail from './pages/CourseDetail.jsx'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/bootcamps" element={<Bootcamps />} />
         <Route path="/request-callback" element={<RequestCallback />} />
         <Route path="/classroom" element={<Classroom />} />
+        <Route path="/course/:id" element={<CourseDetail />} />
       </Routes>
       
       <Footer />
