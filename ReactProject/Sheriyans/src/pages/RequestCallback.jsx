@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function RequestCallback() {
 
@@ -11,7 +13,7 @@ function RequestCallback() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert('Thank you! We will call you back soon.')
+    toast.success("You will received a callback later.")
     setFormData({
       name: '',
       email: '',
@@ -94,6 +96,18 @@ function RequestCallback() {
           Submit Request
         </button>
       </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   )
 }

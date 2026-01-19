@@ -21,7 +21,7 @@ function Navbar(props) {
                 <img className='h-8 w-8 md:h-10 md:w-10' src="/images/light-logo_lNzGXRRlQ.webp" alt="Sheriyans Logo" />
                 <div>
                     <h3 className='text-sm md:text-md leading-tight'>{props.title}</h3>
-                    <h3 className='text-xs md:text-sm text-gray-400'>{props.subtitle}</h3>
+                    <h3 className='text-xs md:text-sm'>{props.subtitle}</h3>
                 </div>
             </div>
         </div>
