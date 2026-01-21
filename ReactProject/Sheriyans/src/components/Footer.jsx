@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin, FaDiscord, FaYoutube, FaTwitter } from 'react-
 
 const Footer = () => {
   return (
-    <footer className=" text-[#C5C5C5] pt-16 px-8 border-t border-zinc-800" style={{fontFamily: 'Neue Machina, sans-serif'}}>
+    <footer className="sm:bg-[#1c1c1c]/80 text-[#C5C5C5] pt-16 px-8 border-t border-zinc-800" style={{fontFamily: 'Neue Machina, sans-serif'}}>
       <div className="w-[95vw] px-15 mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-15 mb-20 text-center md:text-left">

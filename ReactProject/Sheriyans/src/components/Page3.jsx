@@ -4,7 +4,7 @@ import Cards from './Cards.jsx'
 function Page3() {
   return (
     <div className='w-full min-h-screen px-6 md:px-20 py-15 gap-10'>
-      <div className="top text-3xl md:text-[2.5rem] mb-10 md:mb-20" style={{fontFamily: 'Neue Machina, sans-serif'}}>
+      <div className="top text-3xl md:text-[2.5rem] mb-10 md:mb-20" style={{ fontFamily: 'Neue Machina, sans-serif' }}>
         <h1>
           <span>Courses Offered.</span>
         </h1>

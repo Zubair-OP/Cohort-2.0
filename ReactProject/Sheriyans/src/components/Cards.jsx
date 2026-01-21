@@ -1,21 +1,41 @@
 import { useNavigate } from "react-router-dom";
-
+import { useRef } from "react";
 import courses from "../data/courses";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
 function Cards() {
   const navigate = useNavigate();
+  const containerRef = useRef();
 
   const handleCardClick = (id) => {
     navigate(`/course/${id}`);
   };
 
+  useGSAP(() => {
+    gsap.from('.course-card', {
+      opacity: 0.7,
+      scale: 0.96,
+      duration: 1,
+      stagger: 0.3, // Stagger for "one by one" effect
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top 75%', // Starts when top of container is 75% down viewport
+        end: 'bottom bottom', // Ends when bottom of container hits bottom of viewport
+        scrub: 1, // Smooth scrub tied to scroll
+      }
+    })
+  }, { scope: containerRef });
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div ref={containerRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       {courses.map((item, index) => (
         <div
           key={index}
-          className="bg-[#171717] rounded-2xl overflow-hidden 
+          className="course-card bg-[#171717] rounded-2xl overflow-hidden 
                      flex flex-col h-130"
           style={{ fontFamily: "Helvetica Now Display, sans-serif" }}
         >
