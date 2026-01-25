@@ -3,10 +3,10 @@ import { FaInstagram, FaLinkedin, FaDiscord, FaYoutube, FaTwitter } from 'react-
 
 const Footer = () => {
   return (
-    <footer className="sm:bg-[#1c1c1c]/80 text-[#C5C5C5] pt-16 px-8 border-t border-zinc-800" style={{fontFamily: 'Neue Machina, sans-serif'}}>
-      <div className="w-[95vw] px-15 mx-auto">
+    <footer className="sm:bg-[#1c1c1c]/80 text-[#C5C5C5] pt-8 md:pt-16 px-4 md:px-8 border-t border-zinc-800" style={{ fontFamily: 'Neue Machina, sans-serif' }}>
+      <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-15 mb-20 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20 text-center md:text-left">
           {/* Logo and Social Links Section */}
           <div className="space-y-6">
             <div className="flex items-center justify-center md:justify-start gap-2">

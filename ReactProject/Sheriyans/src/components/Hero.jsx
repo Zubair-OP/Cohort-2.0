@@ -39,7 +39,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="side-text w-full md:w-72 leading-1.4 text-[#E9E9E9] mt-10 md:mt-0 md:absolute md:bottom-20 md:right-10 lg:right-15 lg:bottom-64 text-sm transform px-6 py-3 rounded-md shadow-lg bg-[#222] md:bg-transparent text-center md:text-left" style={{ fontFamily: 'Neue Machina, sans-serif' }}>
+        <div className="side-text w-full leading-1.4 text-[#E9E9E9] mt-10 px-6 py-3 rounded-md shadow-lg bg-[#222] text-center md:hidden lg:block lg:w-72 lg:mt-0 lg:absolute lg:bottom-64 lg:right-15 lg:bg-transparent lg:text-left" style={{ fontFamily: 'Neue Machina, sans-serif' }}>
           Get ready to <span className="text-highlight text-[#12A4A1]">accelerate your career </span> with customized courses and leave
           your mark in the tech industry
         </div>
